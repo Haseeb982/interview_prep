@@ -9,9 +9,9 @@ const initFirebaseAdmin = ()=> {
     if (!apps.length) {
         initializeApp({
             credential: cert({
-                projectId: "prepwise-61bd6",
-                clientEmail: process.env.NEXT_PUBLIC_FIREBASE_CLIENT_EMAIL,
-                privateKey: process.env.NEXT_PUBLIC_FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+                projectId: process.env.FIREBASE_PROJECT_ID,
+                clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+                privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
             })
         })
     }
